@@ -30,14 +30,9 @@ const Input = () => {
             flexDirection: "column",
             alignItems: "center"
         }}>
-            <p>От</p>
-            <input type="number" value={before} onChange={handleBeforeChange}/>
-            <p>До</p>
-            <input type="number" value={after} onChange={handleAfterChange}/>
-            <div>
-                <p>Расчет</p>
-                <input type="number" value={total} onChange={handleTotalChange}/>
-            </div>
+            <label htmlFor=""><input type="number" value={before} onChange={handleBeforeChange}/>От</label>
+            <label htmlFor=""><input type="number" value={after} onChange={handleAfterChange}/>До</label>
+            <label htmlFor=""><input type="number" value={total} onChange={handleTotalChange}/>Расчет</label>
         </div>
     );
 };

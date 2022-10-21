@@ -15,7 +15,7 @@ const InputSlice = createSlice({
         },
         getAfter: ( state, action) => {
             state.after = action.payload;
-            state.total = (state.before - state.after) * 2;
+            state.total = (state.after - state.before) * 2;
         },
         getTotal: ( state, action) => {
             state.total = action.payload;
