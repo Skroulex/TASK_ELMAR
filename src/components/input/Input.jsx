@@ -1,6 +1,7 @@
 import React from 'react';
 import {getAfter, getBefore, getTotal} from "../../store/InputSlice";
 import {useDispatch, useSelector} from "react-redux";
+import "./input.css"
 
 const Input = () => {
 
@@ -24,15 +25,10 @@ const Input = () => {
     }
 
     return (
-        <div style={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center"
-        }}>
-            <label htmlFor=""><input type="number" value={before} onChange={handleBeforeChange}/>От</label>
-            <label htmlFor=""><input type="number" value={after} onChange={handleAfterChange}/>До</label>
-            <label htmlFor=""><input type="number" value={total} onChange={handleTotalChange}/>Расчет</label>
+        <div className="input">
+            <label htmlFor="1"><input id='1' type="number" value={before} onChange={handleBeforeChange}/>От</label>
+            <label htmlFor="2"><input id='2' type="number" value={after} onChange={handleAfterChange}/>До</label>
+            <label htmlFor="3"><input id='3' type="number" value={total} onChange={handleTotalChange}/>Расчет</label>
         </div>
     );
 };
